@@ -1,0 +1,471 @@
+$color-fondo: #cccccc;
+$color-principal: #000000;
+$color-tipografia-principal: rgb(51, 255, 196);
+$color-fondo-div: rgb(34, 34, 34);
+$margen-principal: 30px 80px 30px 80px;
+$padding-header: 10px 30px 10px 30px;
+$box-shadow: rgb(34, 34, 34) 0px 5px 30px 0px;
+$negrita-subtitulos-tarjetas: 800;
+$notebook: 1050px;
+$tablet: 830px;
+$ipad: 750px;
+$phone: 600px;
+
+@mixin no-mostrar {
+  display: none;
+}
+
+.no-mostrar {
+  @include no-mostrar;
+}
+
+@mixin estilo-principal {
+  margin: $margen-principal;
+  border-radius: 40px;
+  box-shadow: $box-shadow;
+}
+
+@mixin centrado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@mixin espaciado-buscador {
+  padding: 15px;
+  font-size: 25px;
+}
+
+@mixin caracteristicas-tarjetas {
+  margin: 20px;
+  padding: 15px;
+  background-color: whitesmoke;
+  color: #222222;
+  border-radius: 20px;
+  text-align: center;
+}
+
+@mixin espaciado-subtitulos-tarjetas {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin tamanio-imagen-tarjetas {
+  width: 300px;
+  height: 300px;
+}
+
+@mixin estilo-boton {
+  cursor: pointer;
+  border: 1px solid $color-tipografia-principal;
+  border-radius: 15px;
+  padding: 8px;
+  color: #33ffc4;
+  background-color: $color-principal;
+}
+
+@mixin hoover {
+  cursor: pointer;
+  border: 1px solid $color-principal;
+  border-radius: 15px;
+  padding: 8px;
+  color: $color-principal;
+  background-color: $color-tipografia-principal;
+}
+
+@mixin margen-0 {
+  margin: 0;
+  border-radius: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.centrado {
+  @include centrado;
+}
+
+.derecha {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.justify-content-betwen {
+  justify-content: space-between;
+  align-items: center;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: $color-fondo;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-principal;
+  @include estilo-principal;
+
+  div {
+    padding: $padding-header;
+    img {
+      width: 300px;
+    }
+    img:hover {
+      cursor: pointer;
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    li {
+     
+      @include estilo-boton;
+      list-style: none;
+      margin: 0 10px 0 10px;
+    }
+
+    li:hover {
+     
+      @include hoover;
+    }
+  }
+}
+
+
+
+.div-portada {
+  @include estilo-principal;
+  img {
+    width: 100%;
+    border-radius: 40px;
+  }
+}
+
+
+
+.banner {
+  @include estilo-principal;
+  img {
+    width: 100%;
+    max-height: 100%;
+    height: auto;
+    border-radius: 40px;
+  }
+}
+
+.buscador {
+  @include estilo-principal;
+  @include centrado;
+  background-color: $color-principal;
+  color: $color-tipografia-principal;
+  p,
+  input,
+  img {
+    margin: 8px;
+    padding: 5px;
+  }
+}
+
+.buscador {
+  input {
+    background-color: #cccccc;
+  }
+}
+
+.buscador-boton {
+  @include estilo-boton;
+}
+
+.buscador-boton:hover {
+  @include hoover;
+}
+
+.logo-banner {
+  width: 50px;
+}
+
+
+
+.filtros {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 10px 80px 10px 80px;
+  border-radius: 40px;
+  box-shadow: $box-shadow;
+  background-color: $color-principal;
+  color: $color-tipografia-principal;
+}
+.sub-div-filtros {
+  @include centrado;
+}
+
+.ordenar {
+  @include centrado;
+  margin: 10px 80px 10px 80px;
+  border-radius: 40px;
+  box-shadow: $box-shadow;
+  background-color: $color-principal;
+  color: $color-tipografia-principal;
+}
+
+.filtro-titulo {
+  h2 {
+    margin: 5px;
+    font-size: 16px;
+  }
+}
+
+.filtro-categorias {
+  select {
+    margin: 5px;
+    border: none;
+    padding: 5px;
+  }
+}
+
+.div-personajes {
+  @include estilo-principal;
+  @include centrado;
+
+  flex-wrap: wrap;
+  background-color: $color-fondo-div;
+}
+
+.personaje {
+  @include caracteristicas-tarjetas;
+}
+
+.imagen-personaje {
+  border-radius: 150px;
+}
+
+.nombre-personaje {
+  @include centrado;
+}
+
+.subtitulos-personaje {
+  font-weight: $negrita-subtitulos-tarjetas;
+}
+
+.genero,
+.estado,
+.origen {
+  @include espaciado-subtitulos-tarjetas;
+}
+
+
+.div-ubicaciones {
+  background-color: $color-fondo-div;
+  @include estilo-principal;
+  @include centrado;
+  flex-wrap: wrap;
+}
+
+.ubicacion {
+  @include caracteristicas-tarjetas;
+}
+
+.imagen-ubicacion {
+  @include tamanio-imagen-tarjetas;
+}
+
+.nombre-origen {
+  @include centrado;
+}
+
+.tipo,
+.dimension,
+.residentes {
+  @include espaciado-subtitulos-tarjetas;
+}
+
+.subtitulos-ubicacion {
+  font-weight: $negrita-subtitulos-tarjetas;
+}
+
+.div-episodios {
+  background-color: $color-fondo-div;
+  @include estilo-principal;
+  @include centrado;
+  flex-wrap: wrap;
+}
+
+.episodio {
+  @include caracteristicas-tarjetas;
+}
+
+.imagen-episodio {
+  @include tamanio-imagen-tarjetas;
+}
+
+.nombre-episodio {
+  @include centrado;
+}
+
+.id,
+.air-date,
+.episode {
+  @include espaciado-subtitulos-tarjetas;
+}
+
+.subtitulos-episodio {
+  font-weight: $negrita-subtitulos-tarjetas;
+}
+
+.paginacion {
+  @include centrado;
+  @include estilo-principal;
+  background-color: $color-principal;
+}
+
+.paginacion-boton {
+  border-bottom: none;
+  border-style: none;
+  margin: 10px;
+  background-color: $color-principal;
+  color: $color-tipografia-principal;
+  i {
+    font-size: 40px;
+  }
+  i:hover {
+    cursor: pointer;
+    color: $color-fondo-div;
+  }
+}
+
+footer {
+  @include estilo-principal;
+  @include centrado;
+  background-color: $color-principal;
+  color: $color-tipografia-principal;
+  //font-size: 20px;
+  font-weight: 800;
+  flex-direction: column;
+}
+
+@media (max-width: $notebook) {
+  body {
+    background-color: $color-principal;
+  }
+  header,
+  .div-portada,
+  .div-personajes,
+  .div-ubicaciones,
+  .div-episodios,
+  .filtros,
+  .banner,
+  .buscador,
+  .paginacion,
+  footer {
+    @include margen-0;
+  }
+  .div-portada {
+    img {
+      border-radius: 0px;
+    }
+  }
+  .banner {
+    img {
+      border-radius: 0px;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  header {
+    @include centrado;
+    flex-direction: column;
+    padding: 5px;
+  }
+  footer {
+    padding: 5px;
+  }
+}
+
+
+@media (max-width: $phone) {
+  .div-navegacion {
+    ul {
+      @include centrado;
+      flex-direction: column;
+    }
+  }
+  .div-navegacion {
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        width: 100px;
+        @include centrado;
+        margin: 5px 0 5px 0;
+      }
+    }
+  }
+
+  .buscador {
+    padding: 5px;
+    font-size: 10px;
+    margin: 0;
+  }
+
+  .buscador-boton {
+    margin-right: 10px;
+  }
+
+  .logo-banner {
+    @include no-mostrar;
+  }
+
+  .filtros {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filtro-titulo {
+    h2 {
+      margin: 5px;
+      font-size: 10px;
+    }
+  }
+
+  .filtro-categorias {
+    select {
+      font-size: 10px;
+      width: 80px;
+    }
+  }
+}
+
+
+
+.contenedor-modal {
+  background-color: transparent;
+  opacity: 2;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  .modal {
+    background-color: $color-principal;
+    color: $color-tipografia-principal;
+    @include estilo-principal;
+    width: 400px;
+    margin: 50px;
+    padding: 10px;
+    .fa-times-circle {
+      margin-right: 10px;
+      font-size: 20px;
+    }
+  }
+}

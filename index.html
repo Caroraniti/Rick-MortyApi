@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP API R&M | By Diame</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/rick.png">
+    <script src="https://kit.fontawesome.com/22bd207fea.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div id="ir-inicio"><img src="https://admiring-keller-046d5a.netlify.app/static/media/logo.9baa90dc.png"
+                alt="logo-rick-and-morty"></div>
+        <div class="div-navegacion">
+            <ul>
+                <li id="ir-personajes">PERSONAJES</li>
+                <li id="ir-ubicaciones">UBICACIONES</li>
+                <li id="ir-episodios">EPISODIOS</li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="seccion-inicio">
+        <div class="div-portada"> <img src="img/img-portada.png" alt="portada-rick-and-morty"> </div>
+    </section>
+
+
+    <section id="seccion-fija" class="no-mostrar">
+        <div id="banner" class="banner"><img src="img/img-personajes.png" alt=""></div>
+    </section>
+
+
+
+    <section id="seccion-personajes" class="no-mostrar">
+        <div class="buscador">
+            <p>INICIAR BUSQUEDA</p>
+            <input id="input-personaje" type="text" placeholder="Buscar personaje">
+            <button id="boton-buscar-personaje" class="buscador-boton">BUSCAR</button>
+            <img class="logo-banner" src="/img/logo-buscador.png" alt="">
+        </div>
+
+
+        <div id="filtro-personajes" class="filtros">
+            <div class="sub-div-filtros">
+                <div id="filtro-personajes-titulo" class="filtro-titulo">
+                    <h2>FILTROS</h2>
+                </div>
+                <div id="filtro-personajes-categorias" class="filtro-categorias">
+                    <select name="genero" id="filtro-genero">
+                        <option value="Todos">Genero</option>
+                        <option value="Male">Masculino</option>
+                        <option value="Female">Femenino</option>
+                        <option value="Genderless">Genderless</option>
+                        <option value="unknown">Unknown</option>
+                    </select>
+                    <select name="estado" id="filtro-estado">
+                        <option value="Todos">Estado</option>
+                        <option value="Alive">Vivo</option>
+                        <option value="Dead">Fallecido</option>
+                        <option value="unknown">Unknown</option>
+                    </select>
+                </div>
+            </div>
+            <div class="sub-div-filtros">
+                <div id="ordenar-personajes-titulo" class="filtro-titulo">
+                    <h2>ORDENAR</h2>
+                </div>
+                <div class="filtro-categorias">
+                    <select name="ordenar" id="ordenar-personajes-az-za">
+                        <option value="az">A/Z</option>
+                        <option value="za">Z/A</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div id="div-personajes" class="div-personajes">
+
+        </div>
+
+        <div id="div-segun-personajes" class="no-mostrar">
+
+        </div>
+
+        <div class="paginacion">
+            <button class="paginacion-boton" id="pagina-anterior-personajes"><i
+                    class="fas fa-chevron-circle-left"></i></button>
+            <button class="paginacion-boton" id="pagina-siguiente-personajes"><i
+                    class="fas fa-chevron-circle-right"></i></button>
+        </div>
+    </section>
+
+
+    <section id="seccion-ubicaciones" class="no-mostrar">
+        <div class="buscador">
+            <p>INICIAR BUSQUEDA</p>
+            <input id="input-ubicacion" type="text" placeholder="Buscar ubicacion">
+            <button id="boton-buscar-ubicacion" class="buscador-boton">BUSCAR</button>
+            <img class="logo-banner" src="/img/logo-buscador.png" alt="">
+        </div>
+
+        <div class="ordenar">
+            <div id="ordenar-ubicaciones-titulo" class="filtro-titulo">
+                <h2>ORDENAR</h2>
+            </div>
+            <div class="filtro-categorias">
+                <select name="ordenar" id="ordenar-ubicaciones-az-za">
+                    <option value="az">A/Z</option>
+                    <option value="za">Z/A</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="div-ubicaciones" class="div-ubicaciones">
+
+        </div>
+
+        <div id="div-segun-ubicaciones" class="no-mostrar">
+
+        </div>
+
+        <div class="paginacion">
+            <button class="paginacion-boton" id="pagina-anterior-ubicaciones"><i
+                    class="fas fa-chevron-circle-left"></i></button>
+            <button class="paginacion-boton" id="pagina-siguiente-ubicaciones"><i
+                    class="fas fa-chevron-circle-right"></i></button>
+        </div>
+    </section>
+
+
+    <section id="seccion-episodios" class="no-mostrar">
+        <div class="buscador">
+            <p>INICIAR BUSQUEDA</p>
+            <input id="input-episodio" type="text" placeholder="Buscar episodio">
+            <button id="boton-buscar-episodio" class="buscador-boton">BUSCAR</button>
+            <img class="logo-banner" src="/img/logo-buscador.png" alt="">
+        </div>
+
+        <div class="ordenar">
+            <div id="ordenar-episodios-titulo" class="filtro-titulo">
+                <h2>ORDENAR</h2>
+            </div>
+            <div class="filtro-categorias">
+                <select name="ordenar" id="ordenar-episodios-az-za">
+                    <option value="az">A/Z</option>
+                    <option value="za">Z/A</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="div-episodios" class="div-episodios">
+
+        </div>
+
+        <div id="div-segun-episodios" class="no-mostrar">
+
+        </div>
+
+        <div class="paginacion">
+            <button class="paginacion-boton" id="pagina-anterior-episodios"><i
+                    class="fas fa-chevron-circle-left"></i></button>
+            <button class="paginacion-boton" id="pagina-siguiente-episodios"><i
+                    class="fas fa-chevron-circle-right"></i></button>
+        </div>
+    </section>
+
+    <div id="contenedor-modal" class="contenedor-modal no-mostrar"></div>
+
+    <footer>
+        <p> Hecho con 💚 por Caro</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

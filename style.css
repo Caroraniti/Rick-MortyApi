@@ -1,0 +1,478 @@
+.no-mostrar {
+    display: none;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .centrado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .derecha {
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .justify-content-betwen {
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  body {
+    box-sizing: border-box;
+    margin: 0;
+    background-color: #cccccc;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    margin: 30px 80px 30px 80px;
+    border-radius: 40px;
+    box-shadow: #222222 0px 5px 30px 0px;
+  }
+  header div {
+    padding: 10px 30px 10px 30px;
+  }
+  header div img {
+    width: 300px;
+  }
+  header div img:hover {
+    cursor: pointer;
+  }
+  header ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  header ul li {
+   
+    cursor: pointer;
+    border: 1px solid #33ffc4;
+    border-radius: 15px;
+    padding: 8px;
+    color: #33ffc4;
+    background-color: #000000;
+    list-style: none;
+    margin: 0 10px 0 10px;
+  }
+  header ul li:hover {
+ 
+    cursor: pointer;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    padding: 8px;
+    color: #000000;
+    background-color: #33ffc4;
+  }
+  
+
+  .div-portada {
+    margin: 30px 80px 30px 80px;
+    border-radius: 40px;
+    box-shadow: #222222 0px 5px 30px 0px;
+  }
+  .div-portada img {
+    width: 100%;
+    border-radius: 40px;
+  }
+  
+
+  .banner {
+    margin: 30px 80px 30px 80px;
+    border-radius: 40px;
+    box-shadow: #222222 0px 5px 30px 0px;
+  }
+  .banner img {
+    width: 100%;
+    max-height: 100%;
+    height: auto;
+    border-radius: 40px;
+  }
+  
+  .buscador {
+    margin: 30px 80px 30px 80px;
+    border-radius: 40px;
+    box-shadow: #222222 0px 5px 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #000000;
+    color: #33ffc4;
+  }
+  .buscador p,
+  .buscador input,
+  .buscador img {
+    margin: 8px;
+    padding: 5px;
+  }
+  
+  .buscador input {
+    background-color: #cccccc;
+  }
+  
+  .buscador-boton {
+    cursor: pointer;
+    border: 1px solid #33ffc4;
+    border-radius: 15px;
+    padding: 8px;
+    color: #33ffc4;
+    background-color: #000000;
+  }
+  
+  .buscador-boton:hover {
+    cursor: pointer;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    padding: 8px;
+    color: #000000;
+    background-color: #33ffc4;
+  }
+  
+  .logo-banner {
+    width: 50px;
+  }
+  
+  .filtros {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10px 80px 10px 80px;
+    border-radius: 40px;
+    box-shadow: #222222 0px 5px 30px 0px;
+    background-color: #000000;
+    color: #33ffc4;
+  }
+  
+  .sub-div-filtros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .ordenar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px 80px 10px 80px;
+    border-radius: 40px;
+    box-shadow: #222222 0px 5px 30px 0px;
+    background-color: #000000;
+    color: #33ffc4;
+  }
+  
+  .filtro-titulo h2 {
+    margin: 5px;
+    font-size: 16px;
+  }
+  
+  .filtro-categorias select {
+    margin: 5px;
+    border: none;
+    padding: 5px;
+  }
+
+  .div-personajes {
+    margin: 30px 80px 30px 80px;
+    border-radius: 40px;
+    box-shadow: #222222 0px 5px 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    background-color: #222222;
+  }
+  
+  .personaje {
+    margin: 20px;
+    padding: 15px;
+    background-color: whitesmoke;
+    color: #222222;
+    border-radius: 20px;
+    text-align: center;
+  }
+  
+  .imagen-personaje {
+    border-radius: 150px;
+  }
+  
+  .nombre-personaje {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .subtitulos-personaje {
+    font-weight: 800;
+  }
+  
+  .genero,
+  .estado,
+  .origen {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+
+  .div-ubicaciones {
+    background-color: #222222;
+    margin: 30px 80px 30px 80px;
+    border-radius: 40px;
+    box-shadow: #222222 0px 5px 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  
+  .ubicacion {
+    margin: 20px;
+    padding: 15px;
+    background-color: whitesmoke;
+    color: #222222;
+    border-radius: 20px;
+    text-align: center;
+  }
+  
+  .imagen-ubicacion {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .nombre-origen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .tipo,
+  .dimension,
+  .residentes {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .subtitulos-ubicacion {
+    font-weight: 800;
+  }
+  
+
+  .div-episodios {
+    background-color: #222222;
+    margin: 30px 80px 30px 80px;
+    border-radius: 40px;
+    box-shadow: #222222 0px 5px 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  
+  .episodio {
+    margin: 20px;
+    padding: 15px;
+    background-color: whitesmoke;
+    color: #222222;
+    border-radius: 20px;
+    text-align: center;
+  }
+  
+  .imagen-episodio {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .nombre-episodio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .id,
+  .air-date,
+  .episode {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .subtitulos-episodio {
+    font-weight: 800;
+  }
+  
+
+  .paginacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 80px 30px 80px;
+    border-radius: 40px;
+    box-shadow: #222222 0px 5px 30px 0px;
+    background-color: #000000;
+  }
+  
+  .paginacion-boton {
+    border-bottom: none;
+    border-style: none;
+    margin: 10px;
+    background-color: #000000;
+    color: #33ffc4;
+  }
+  .paginacion-boton i {
+    font-size: 40px;
+  }
+  .paginacion-boton i:hover {
+    cursor: pointer;
+    color: #222222;
+  }
+  
+  footer {
+    margin: 30px 80px 30px 80px;
+    border-radius: 40px;
+    box-shadow: #222222 0px 5px 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #000000;
+    color: #33ffc4;
+    font-weight: 800;
+    flex-direction: column;
+  }
+  
+  @media (max-width: 1050px) {
+    body {
+      background-color: #000000;
+    }
+  
+    header,
+  .div-portada,
+  .div-personajes,
+  .div-ubicaciones,
+  .div-episodios,
+  .filtros,
+  .banner,
+  .buscador,
+  .paginacion,
+  footer {
+      margin: 0;
+      border-radius: 0;
+    }
+  
+    .div-portada img {
+      border-radius: 0px;
+    }
+  
+    .banner img {
+      border-radius: 0px;
+    }
+  }
+  @media (max-width: 830px) {
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 5px;
+    }
+  
+    footer {
+      padding: 5px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .div-navegacion ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+    }
+  
+    .div-navegacion ul {
+      margin: 0;
+      padding: 0;
+    }
+    .div-navegacion ul li {
+      width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: 5px 0 5px 0;
+    }
+  
+    .buscador {
+      padding: 5px;
+      font-size: 10px;
+      margin: 0;
+    }
+  
+    .buscador-boton {
+      margin-right: 10px;
+    }
+  
+    .logo-banner {
+      display: none;
+    }
+  
+    .filtros {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .filtro-titulo h2 {
+      margin: 5px;
+      font-size: 10px;
+    }
+  
+    .filtro-categorias select {
+      font-size: 10px;
+      width: 80px;
+    }
+  }
+  .contenedor-modal {
+    background-color: transparent;
+    opacity: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+  }
+  .contenedor-modal .modal {
+    background-color: #000000;
+    color: #33ffc4;
+    margin: 30px 80px 30px 80px;
+    border-radius: 40px;
+    box-shadow: #222222 0px 5px 30px 0px;
+    width: 400px;
+    margin: 50px;
+    padding: 10px;
+  }
+  .contenedor-modal .modal .fa-times-circle {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+/*# sourceMappingURL=style.css.map */
